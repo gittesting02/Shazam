@@ -1,0 +1,15 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: discord
+  labels:
+    app: discord
+    application-id: app_88d90a4f-5a73-4e4c-85f3-60b02e09820d
+spec:
+  selector:
+    matchLabels:
+      app: discord
+  template:
+    metadata:
+      labels:
+        app: discord
