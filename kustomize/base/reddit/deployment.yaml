@@ -1,0 +1,15 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: reddit
+  labels:
+    app: reddit
+    application-id: app_a6a138ab-f475-4128-85cc-bdc072080fbe
+spec:
+  selector:
+    matchLabels:
+      app: reddit
+  template:
+    metadata:
+      labels:
+        app: reddit
