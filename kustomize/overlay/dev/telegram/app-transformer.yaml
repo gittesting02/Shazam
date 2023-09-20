@@ -1,0 +1,35 @@
+apiVersion: transformers.customplugin.co/v1
+kind: SkyUAppTransformer
+metadata:
+  name: skyu-deployment
+  annotations:
+    config.kubernetes.io/function: |2-
+
+                  exec:
+                    path: skyu-app-transformer
+                
+type: service
+applicationContainers:
+  - name: main-container
+    imageRegistry: test
+    imageTag: latest
+    cpuRequestMili: 100
+    cpuLimitMili: 200
+    memoryRequestMb: 100
+    memoryLimitMb: 200
+    applicationPorts:
+      - port: 80
+        protocol: TCP
+minReplicas: 1
+maxReplicas: 1
+terminationGracePeriodSeconds: 60
+namespace: default
+name: telegram
+labels:
+  app: telegram
+  application-id: app_b0061f81-db73-4fda-bc63-74a070f0fee8
+  project-id: project_efd04c7e-bf4a-478d-b2cf-c8e840ce4ccf
+  organization-id: org_01b50229-db34-43d4-8f3e-d1aeb683d900
+  environment-id: env_f0a63900-55cd-46e9-8ace-0a17c5b2f827
+  environment-name: dev
+serviceType: ClusterIP
