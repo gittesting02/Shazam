@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: staging-default
+  labels:
+    environment-id: env_26af9436-92aa-40b0-92f7-b09234d25a68
+    project-id: project_efd04c7e-bf4a-478d-b2cf-c8e840ce4ccf
+    project-name: Shazam
+    environment-name: staging
+    organization-id: org_01b50229-db34-43d4-8f3e-d1aeb683d900
