@@ -1,0 +1,35 @@
+apiVersion: transformers.customplugin.co/v1
+kind: SkyUAppTransformer
+metadata:
+  name: skyu-deployment
+  annotations:
+    config.kubernetes.io/function: |2-
+
+                  exec:
+                    path: skyu-app-transformer
+                
+type: service
+applicationContainers:
+  - name: main-container
+    imageRegistry: test
+    imageTag: latest
+    cpuRequestMili: 100
+    cpuLimitMili: 200
+    memoryRequestMb: 100
+    memoryLimitMb: 200
+    applicationPorts:
+      - port: 80
+        protocol: TCP
+minReplicas: 1
+maxReplicas: 1
+terminationGracePeriodSeconds: 60
+namespace: default
+name: reddit
+labels:
+  app: reddit
+  application-id: app_a6a138ab-f475-4128-85cc-bdc072080fbe
+  project-id: project_efd04c7e-bf4a-478d-b2cf-c8e840ce4ccf
+  organization-id: org_01b50229-db34-43d4-8f3e-d1aeb683d900
+  environment-id: env_daba8ba8-4c90-47b0-af1e-7535d069df6e
+  environment-name: prod
+serviceType: ClusterIP
