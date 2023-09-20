@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: foo
+  labels:
+    environment-id: env_954385b2-1200-49dd-a1b3-47d2e54808e8
+    project-id: project_efd04c7e-bf4a-478d-b2cf-c8e840ce4ccf
+    project-name: Shazam
+    environment-name: prod-dev
+    organization-id: org_01b50229-db34-43d4-8f3e-d1aeb683d900
