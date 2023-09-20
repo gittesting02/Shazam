@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations: {}
+  labels:
+    app: telegram
+    application-id: app_b0061f81-db73-4fda-bc63-74a070f0fee8
+  name: telegram
+spec:
+  selector:
+    app: telegram
