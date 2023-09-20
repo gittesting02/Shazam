@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations: {}
+  labels:
+    app: discord
+    application-id: app_88d90a4f-5a73-4e4c-85f3-60b02e09820d
+  name: discord
+spec:
+  selector:
+    app: discord
