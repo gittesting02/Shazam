@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: bar
+  labels:
+    environment-id: env_daba8ba8-4c90-47b0-af1e-7535d069df6e
+    project-id: project_efd04c7e-bf4a-478d-b2cf-c8e840ce4ccf
+    project-name: Shazam
+    environment-name: prod
+    organization-id: org_01b50229-db34-43d4-8f3e-d1aeb683d900
